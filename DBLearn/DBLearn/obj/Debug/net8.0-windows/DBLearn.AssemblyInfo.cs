@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DBLearn")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0add4d5a92906a4b91d2dd96c1bffa0ca2c5de2f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20fca3e81198f3dcc61ad4a33aa5f0b0ac4bfc92")]
 [assembly: System.Reflection.AssemblyProductAttribute("DBLearn")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DBLearn")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

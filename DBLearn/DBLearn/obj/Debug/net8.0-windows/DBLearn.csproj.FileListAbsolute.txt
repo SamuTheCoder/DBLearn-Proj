@@ -49,3 +49,8 @@ C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\ref
 C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.pdb
 C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.genruntimeconfig.cache
 C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\ref\DBLearn.dll
+C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.DepartmentsForm.resources
+C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.CourserForm.resources
+C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.DegreesForm.resources
+C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.StudentsForm.resources
+C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.TeachersForm.resources

@@ -22,8 +22,6 @@ namespace DBLearn
         public void Form1_Load(object sender, EventArgs e)
         {
             sqlConnection = new SqlConnection(connectionString);
-            sqlConnection.Open();
-            MessageBox.Show("Connection Open");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,6 +31,11 @@ namespace DBLearn
 
         private void university_btn_Click(object sender, EventArgs e)
         {
+            sqlConnection.Open();
+            if(sqlConnection.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Failed to connect to database");
+            }
             string sqlQuery = "SELECT * FROM dblearn.university";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
@@ -41,6 +44,7 @@ namespace DBLearn
             adapter.Fill(dataTable);
 
             universityDataGrid.DataSource = dataTable;
+            sqlConnection.Close();
         }
 
         private void addUniversityBtn_Click(object sender, EventArgs e)
@@ -56,6 +60,7 @@ namespace DBLearn
 
             try
             {
+                sqlConnection.Open();
                 string sqlQuery = $"INSERT INTO dblearn.university (university_name, university_address) VALUES ('{universityName}', '{universityAddress}')";
                 using (SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection))
                 {
@@ -72,7 +77,8 @@ namespace DBLearn
                     {
                         MessageBox.Show("Failed to add university");
                     }
-                }              
+                }
+                sqlConnection.Close();
             }
             catch (Exception ex)
             {
@@ -81,7 +87,11 @@ namespace DBLearn
             finally
             {
                 universityNameTextBox.Text = "";
-                universityAddrTextBox.Text = "";             
+                universityAddrTextBox.Text = "";        
+                if (sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
             }
         }
 
@@ -94,6 +104,7 @@ namespace DBLearn
             }
             try
             {
+                sqlConnection.Open();
                 string sqlQuery = $"DELETE FROM dblearn.university WHERE university_name = '{selectedUniversityName}' AND university_address = '{selectedUniversityAddress}'";
                 using (SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection))
                 {
@@ -116,6 +127,10 @@ namespace DBLearn
             {
                 selectedUniversityName = "";
                 selectedUniversityAddress = "";
+                if (sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
             }
         }
         private void UniversityDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -130,7 +145,6 @@ namespace DBLearn
                 DataGridViewRow selectedRow = universityDataGrid.SelectedRows[0];
                 selectedUniversityName = selectedRow.Cells["university_name"].Value.ToString();
                 selectedUniversityAddress = selectedRow.Cells["university_address"].Value.ToString();
-                MessageBox.Show($"Selected University: {selectedUniversityName} at {selectedUniversityAddress}");
             }
         }
         private void goToUniversity_Click(object sender, EventArgs e)
