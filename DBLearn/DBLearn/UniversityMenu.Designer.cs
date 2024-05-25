@@ -35,7 +35,6 @@ namespace DBLearn
             studentsBtn = new Button();
             uniLabel = new Label();
             label2 = new Label();
-            teachersBtn = new Button();
             SuspendLayout();
             // 
             // departmentsBtn
@@ -70,7 +69,7 @@ namespace DBLearn
             // 
             // studentsBtn
             // 
-            studentsBtn.Location = new Point(413, 290);
+            studentsBtn.Location = new Point(314, 288);
             studentsBtn.Name = "studentsBtn";
             studentsBtn.Size = new Size(170, 58);
             studentsBtn.TabIndex = 4;
@@ -101,22 +100,11 @@ namespace DBLearn
             label2.Text = "Choose one of the following to get it's data";
             label2.Click += uniLabel_Click;
             // 
-            // teachersBtn
-            // 
-            teachersBtn.Location = new Point(212, 290);
-            teachersBtn.Name = "teachersBtn";
-            teachersBtn.Size = new Size(170, 58);
-            teachersBtn.TabIndex = 8;
-            teachersBtn.Text = "Teachers";
-            teachersBtn.UseVisualStyleBackColor = true;
-            teachersBtn.Click += teachersBtn_Click;
-            // 
             // UniversityMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(teachersBtn);
             Controls.Add(label2);
             Controls.Add(uniLabel);
             Controls.Add(studentsBtn);
@@ -139,6 +127,5 @@ namespace DBLearn
         private Button studentsBtn;
         private Label uniLabel;
         private Label label2;
-        private Button teachersBtn;
     }
 }

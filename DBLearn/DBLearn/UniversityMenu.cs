@@ -65,10 +65,5 @@ namespace DBLearn
             courserForm.Show();
         }
 
-        private void teachersBtn_Click(object sender, EventArgs e)
-        {
-            TeachersForm teachersForm = new TeachersForm(university_name, university_address);
-            teachersForm.Show();
-        }
     }
 }

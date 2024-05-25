@@ -12,7 +12,7 @@ namespace DBLearn
 {
     public partial class TeachersForm : Form
     {
-        public TeachersForm(string university_name, string university_address)
+        public TeachersForm(string university_name, int department_id)
         {
             InitializeComponent();
         }

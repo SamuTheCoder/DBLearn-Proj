@@ -14,14 +14,12 @@ namespace DBLearn
     public partial class DepartmentsForm : Form
     {
         private string university_name;
-        private string university_address;
         private SqlConnection sqlConnection = null;
-        private string connectionString = "Revoked";
+        private string connectionString = "Revoked;";
         public DepartmentsForm(string university_name, string university_address)
         {
             InitializeComponent();
             this.university_name = university_name;
-            this.university_address = university_address;
         }
 
         private void DepartmentsForm_Load(object sender, EventArgs e)
@@ -58,6 +56,110 @@ namespace DBLearn
         private void deptGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void addDeptBtn_Click(object sender, EventArgs e)
+        {
+            using (addDepartment addDept = new addDepartment(university_name))
+            {
+                if (addDept.ShowDialog() == DialogResult.OK)
+                {
+                    listDeptsBtn_Click(sender, e);
+                }
+            }
+        }
+
+        private void removeDeptBtn_Click(object sender, EventArgs e)
+        {
+            if (deptGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a department to remove");
+                return;
+            }
+
+            string selectedDeptID = deptGridView.SelectedRows[0].Cells["department_id"].Value.ToString();
+
+            try
+            {
+                sqlConnection.Open();
+                string query = $"DELETE FROM dblearn.department WHERE department_id = '{selectedDeptID}'";
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                int affectedRows = sqlCommand.ExecuteNonQuery();
+                if (affectedRows > 0)
+                {
+                    MessageBox.Show("Department removed successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to remove department");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to remove department: {ex.Message}");
+            }
+            finally
+            {
+                selectedDeptID = "";
+                if (sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            string searchQuery = searchBox.Text;
+            if (string.IsNullOrEmpty(searchQuery))
+            {
+                MessageBox.Show("Please enter a department name to search");
+                return;
+            }
+
+            sqlConnection.Open();
+            if (sqlConnection.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Connection to database failed");
+                return;
+            }
+            string query = $"SELECT * FROM dblearn.department WHERE university_name = '{this.university_name}' AND department_name LIKE '%{searchQuery}%'";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+
+            SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+            adapter.SelectCommand = sqlCommand;
+
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+
+            deptGridView.DataSource = dataTable;
+            sqlConnection.Close();
+        }
+
+        private void teachersBtn_Click(object sender, EventArgs e)
+        {
+            if(deptGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a department to view teachers");
+                return;
+            }
+
+            DataGridViewRow selectedRow = deptGridView.SelectedRows[0];
+            if(selectedRow == null || selectedRow.Cells["department_id"].Value == null)
+            {
+                MessageBox.Show("Please select a valid department to view teachers");
+                return;
+            }
+
+            int deptID = Convert.ToInt32(selectedRow.Cells["department_id"].Value);
+
+            TeachersForm teachersForm = new TeachersForm(university_name, deptID);
+            teachersForm.Show();
         }
     }
 }

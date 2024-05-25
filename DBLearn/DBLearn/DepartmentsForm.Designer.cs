@@ -32,21 +32,22 @@
             deptUniLabel = new Label();
             deptLabel = new Label();
             listDeptsBtn = new Button();
-            button1 = new Button();
+            addDeptBtn = new Button();
+            removeDeptBtn = new Button();
+            searchBtn = new Button();
             button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button2 = new Button();
+            searchBox = new TextBox();
+            teachersBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)deptGridView).BeginInit();
             SuspendLayout();
             // 
             // deptGridView
             // 
             deptGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            deptGridView.Location = new Point(221, 233);
+            deptGridView.Location = new Point(356, 279);
             deptGridView.Name = "deptGridView";
             deptGridView.RowHeadersWidth = 51;
-            deptGridView.Size = new Size(567, 188);
+            deptGridView.Size = new Size(841, 244);
             deptGridView.TabIndex = 0;
             deptGridView.CellContentClick += deptGridView_CellContentClick;
             // 
@@ -54,7 +55,7 @@
             // 
             deptUniLabel.AutoSize = true;
             deptUniLabel.Font = new Font("Segoe UI", 18F);
-            deptUniLabel.Location = new Point(278, 35);
+            deptUniLabel.Location = new Point(389, 27);
             deptUniLabel.Name = "deptUniLabel";
             deptUniLabel.Size = new Size(64, 41);
             deptUniLabel.TabIndex = 1;
@@ -65,7 +66,7 @@
             // 
             deptLabel.AutoSize = true;
             deptLabel.Font = new Font("Segoe UI", 18F);
-            deptLabel.Location = new Point(298, 76);
+            deptLabel.Location = new Point(492, 87);
             deptLabel.Name = "deptLabel";
             deptLabel.Size = new Size(190, 41);
             deptLabel.TabIndex = 2;
@@ -73,75 +74,88 @@
             // 
             // listDeptsBtn
             // 
-            listDeptsBtn.Location = new Point(644, 145);
+            listDeptsBtn.Location = new Point(1005, 187);
             listDeptsBtn.Name = "listDeptsBtn";
-            listDeptsBtn.Size = new Size(133, 59);
+            listDeptsBtn.Size = new Size(192, 79);
             listDeptsBtn.TabIndex = 3;
             listDeptsBtn.Text = "List Departments";
             listDeptsBtn.UseVisualStyleBackColor = true;
             listDeptsBtn.Click += listDeptsBtn_Click;
             // 
-            // button1
+            // addDeptBtn
             // 
-            button1.Location = new Point(12, 145);
-            button1.Name = "button1";
-            button1.Size = new Size(133, 59);
-            button1.TabIndex = 4;
-            button1.Text = "Add Department";
-            button1.UseVisualStyleBackColor = true;
+            addDeptBtn.Location = new Point(29, 136);
+            addDeptBtn.Name = "addDeptBtn";
+            addDeptBtn.Size = new Size(207, 80);
+            addDeptBtn.TabIndex = 4;
+            addDeptBtn.Text = "Add Department";
+            addDeptBtn.UseVisualStyleBackColor = true;
+            addDeptBtn.Click += addDeptBtn_Click;
+            // 
+            // removeDeptBtn
+            // 
+            removeDeptBtn.Location = new Point(29, 247);
+            removeDeptBtn.Name = "removeDeptBtn";
+            removeDeptBtn.Size = new Size(207, 74);
+            removeDeptBtn.TabIndex = 8;
+            removeDeptBtn.Text = "Remove Department";
+            removeDeptBtn.UseVisualStyleBackColor = true;
+            removeDeptBtn.Click += removeDeptBtn_Click;
+            // 
+            // searchBtn
+            // 
+            searchBtn.Location = new Point(773, 212);
+            searchBtn.Name = "searchBtn";
+            searchBtn.Size = new Size(208, 54);
+            searchBtn.TabIndex = 9;
+            searchBtn.Text = "Search Department";
+            searchBtn.UseVisualStyleBackColor = true;
+            searchBtn.Click += searchBtn_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(328, 145);
+            button3.Location = new Point(29, 349);
             button3.Name = "button3";
-            button3.Size = new Size(133, 59);
+            button3.Size = new Size(207, 74);
             button3.TabIndex = 6;
             button3.Text = "Update Department";
             button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // searchBox
             // 
-            button4.Location = new Point(489, 145);
-            button4.Name = "button4";
-            button4.Size = new Size(133, 59);
-            button4.TabIndex = 7;
-            button4.Text = "Add Department";
-            button4.UseVisualStyleBackColor = true;
+            searchBox.Location = new Point(369, 226);
+            searchBox.Name = "searchBox";
+            searchBox.Size = new Size(364, 27);
+            searchBox.TabIndex = 10;
+            searchBox.TextChanged += searchBox_TextChanged;
             // 
-            // button5
+            // teachersBtn
             // 
-            button5.Location = new Point(172, 145);
-            button5.Name = "button5";
-            button5.Size = new Size(133, 59);
-            button5.TabIndex = 8;
-            button5.Text = "Remove Department";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(12, 233);
-            button2.Name = "button2";
-            button2.Size = new Size(133, 59);
-            button2.TabIndex = 9;
-            button2.Text = "Search Department";
-            button2.UseVisualStyleBackColor = true;
+            teachersBtn.Location = new Point(29, 449);
+            teachersBtn.Name = "teachersBtn";
+            teachersBtn.Size = new Size(207, 74);
+            teachersBtn.TabIndex = 11;
+            teachersBtn.Text = "Teachers (Select a Department)";
+            teachersBtn.UseVisualStyleBackColor = true;
+            teachersBtn.Click += teachersBtn_Click;
             // 
             // DepartmentsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button5);
-            Controls.Add(button4);
+            ClientSize = new Size(1228, 535);
+            Controls.Add(teachersBtn);
+            Controls.Add(searchBox);
+            Controls.Add(searchBtn);
+            Controls.Add(removeDeptBtn);
             Controls.Add(button3);
-            Controls.Add(button1);
+            Controls.Add(addDeptBtn);
             Controls.Add(listDeptsBtn);
             Controls.Add(deptLabel);
             Controls.Add(deptUniLabel);
             Controls.Add(deptGridView);
             Name = "DepartmentsForm";
-            Text = "DepartmentsForm";
+            Text = "W";
             Load += DepartmentsForm_Load;
             ((System.ComponentModel.ISupportInitialize)deptGridView).EndInit();
             ResumeLayout(false);
@@ -154,10 +168,11 @@
         private Label deptUniLabel;
         private Label deptLabel;
         private Button listDeptsBtn;
-        private Button button1;
+        private Button addDeptBtn;
+        private Button removeDeptBtn;
+        private Button searchBtn;
         private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button2;
+        private TextBox searchBox;
+        private Button teachersBtn;
     }
 }
