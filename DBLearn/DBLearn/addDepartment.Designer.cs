@@ -135,6 +135,7 @@
             Controls.Add(label1);
             Name = "addDepartment";
             Text = "addDepartment";
+            Load += addDepartment_Load;
             ResumeLayout(false);
             PerformLayout();
         }

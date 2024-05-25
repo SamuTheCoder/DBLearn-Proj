@@ -61,7 +61,8 @@ namespace DBLearn
                 MessageBox.Show("Please fill in all fields");
                 return;
             }
-            try {
+            try
+            {
                 sqlConnection.Open();
                 if (sqlConnection.State != ConnectionState.Open)
                 {
@@ -91,7 +92,7 @@ namespace DBLearn
                 }
                 sqlConnection.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Failed to add department: {ex.Message}");
             }
@@ -106,6 +107,11 @@ namespace DBLearn
                     sqlConnection.Close();
                 }
             }
+        }
+
+        private void addDepartment_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

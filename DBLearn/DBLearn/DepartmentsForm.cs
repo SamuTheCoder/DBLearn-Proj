@@ -156,9 +156,9 @@ namespace DBLearn
                 return;
             }
 
-            int deptID = Convert.ToInt32(selectedRow.Cells["department_id"].Value);
+            string department_name = selectedRow.Cells["department_name"].Value.ToString();
 
-            TeachersForm teachersForm = new TeachersForm(university_name, deptID);
+            TeachersForm teachersForm = new TeachersForm(university_name, department_name);
             teachersForm.Show();
         }
     }
