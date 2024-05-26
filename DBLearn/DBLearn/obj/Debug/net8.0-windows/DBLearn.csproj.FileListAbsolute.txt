@@ -50,9 +50,12 @@ C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBL
 C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.genruntimeconfig.cache
 C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\ref\DBLearn.dll
 C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.DepartmentsForm.resources
-C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.CourserForm.resources
 C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.DegreesForm.resources
 C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.StudentsForm.resources
 C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.TeachersForm.resources
 C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.addDepartment.resources
 C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.addTeacher.resources
+C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.addDegree.resources
+C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.addStudent.resources
+C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.addCourse.resources
+C:\Users\samut\Desktop\DBLearn-Proj\DBLearn\DBLearn\obj\Debug\net8.0-windows\DBLearn.CoursesForm.resources

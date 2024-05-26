@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DBLearn
 {
-    public partial class CourserForm : Form
+    public partial class addStudent : Form
     {
-        public CourserForm(string university_name, string university_address)
+        public addStudent()
         {
             InitializeComponent();
         }
 
-        private void CourserForm_Load(object sender, EventArgs e)
+        private void addStudent_Load(object sender, EventArgs e)
         {
 
         }

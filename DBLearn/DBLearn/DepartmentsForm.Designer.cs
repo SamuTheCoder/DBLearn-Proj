@@ -35,7 +35,7 @@
             addDeptBtn = new Button();
             removeDeptBtn = new Button();
             searchBtn = new Button();
-            button3 = new Button();
+            goToCourseBtn = new Button();
             searchBox = new TextBox();
             teachersBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)deptGridView).BeginInit();
@@ -49,7 +49,7 @@
             deptGridView.RowHeadersWidth = 51;
             deptGridView.Size = new Size(841, 244);
             deptGridView.TabIndex = 0;
-            deptGridView.CellContentClick += deptGridView_CellContentClick;
+            deptGridView.SelectionChanged += deptGridView_selectionChanged;
             // 
             // deptUniLabel
             // 
@@ -84,7 +84,7 @@
             // 
             // addDeptBtn
             // 
-            addDeptBtn.Location = new Point(29, 136);
+            addDeptBtn.Location = new Point(29, 244);
             addDeptBtn.Name = "addDeptBtn";
             addDeptBtn.Size = new Size(207, 80);
             addDeptBtn.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             // removeDeptBtn
             // 
-            removeDeptBtn.Location = new Point(29, 247);
+            removeDeptBtn.Location = new Point(29, 355);
             removeDeptBtn.Name = "removeDeptBtn";
             removeDeptBtn.Size = new Size(207, 74);
             removeDeptBtn.TabIndex = 8;
@@ -112,14 +112,15 @@
             searchBtn.UseVisualStyleBackColor = true;
             searchBtn.Click += searchBtn_Click;
             // 
-            // button3
+            // goToCourseBtn
             // 
-            button3.Location = new Point(29, 349);
-            button3.Name = "button3";
-            button3.Size = new Size(207, 74);
-            button3.TabIndex = 6;
-            button3.Text = "Update Department";
-            button3.UseVisualStyleBackColor = true;
+            goToCourseBtn.Location = new Point(29, 143);
+            goToCourseBtn.Name = "goToCourseBtn";
+            goToCourseBtn.Size = new Size(207, 74);
+            goToCourseBtn.TabIndex = 6;
+            goToCourseBtn.Text = "Department's Courses";
+            goToCourseBtn.UseVisualStyleBackColor = true;
+            goToCourseBtn.Click += goToCourseBtn_Click;
             // 
             // searchBox
             // 
@@ -148,7 +149,7 @@
             Controls.Add(searchBox);
             Controls.Add(searchBtn);
             Controls.Add(removeDeptBtn);
-            Controls.Add(button3);
+            Controls.Add(goToCourseBtn);
             Controls.Add(addDeptBtn);
             Controls.Add(listDeptsBtn);
             Controls.Add(deptLabel);
@@ -171,7 +172,7 @@
         private Button addDeptBtn;
         private Button removeDeptBtn;
         private Button searchBtn;
-        private Button button3;
+        private Button goToCourseBtn;
         private TextBox searchBox;
         private Button teachersBtn;
     }

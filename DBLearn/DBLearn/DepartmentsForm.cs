@@ -14,6 +14,7 @@ namespace DBLearn
     public partial class DepartmentsForm : Form
     {
         private string university_name;
+        private int selectedDepartmentId;
         private SqlConnection sqlConnection = null;
         private string connectionString = "Revoked;";
         public DepartmentsForm(string university_name, string university_address)
@@ -53,9 +54,13 @@ namespace DBLearn
             sqlConnection.Close();
         }
 
-        private void deptGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void deptGridView_selectionChanged(object sender, EventArgs e)
         {
-
+            if (deptGridView.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = deptGridView.SelectedRows[0];
+                selectedDepartmentId = Convert.ToInt32(selectedRow.Cells["department_id"].Value);
+            }
         }
 
         private void addDeptBtn_Click(object sender, EventArgs e)
@@ -143,14 +148,14 @@ namespace DBLearn
 
         private void teachersBtn_Click(object sender, EventArgs e)
         {
-            if(deptGridView.SelectedRows.Count == 0)
+            if (deptGridView.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Please select a department to view teachers");
                 return;
             }
 
             DataGridViewRow selectedRow = deptGridView.SelectedRows[0];
-            if(selectedRow == null || selectedRow.Cells["department_id"].Value == null)
+            if (selectedRow == null || selectedRow.Cells["department_id"].Value == null)
             {
                 MessageBox.Show("Please select a valid department to view teachers");
                 return;
@@ -160,6 +165,35 @@ namespace DBLearn
 
             TeachersForm teachersForm = new TeachersForm(university_name, department_name);
             teachersForm.Show();
+        }
+
+        private void goToCourseBtn_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            if (sqlConnection.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Department ID couldn't be verified");
+                return;
+            }
+            string query = $"SELECT * FROM dblearn.department WHERE department_id = '{selectedDepartmentId}'";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+
+            int count = Convert.ToInt32(sqlCommand.ExecuteScalar());
+            if (count == 0)
+            {
+                MessageBox.Show("Department ID is invalid");
+                sqlConnection.Close();
+                return;
+            }
+            if(sqlConnection.State == ConnectionState.Open)
+            {
+                sqlConnection.Close();
+            }
+            if (!string.IsNullOrEmpty(university_name))
+            {
+                CoursesForm coursesForm = new CoursesForm(university_name, selectedDepartmentId);
+                coursesForm.Show();
+            }
         }
     }
 }

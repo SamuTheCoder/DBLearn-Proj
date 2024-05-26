@@ -58,12 +58,5 @@ namespace DBLearn
             DegreesForm degreesForm = new DegreesForm(university_name, university_address);
             degreesForm.Show();
         }
-
-        private void CoursesBtn_Click(object sender, EventArgs e)
-        {
-            CourserForm courserForm = new CourserForm(university_name, university_address);
-            courserForm.Show();
-        }
-
     }
 }

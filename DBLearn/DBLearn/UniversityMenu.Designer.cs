@@ -31,7 +31,6 @@ namespace DBLearn
         {
             departmentsBtn = new Button();
             degreesBtn = new Button();
-            CoursesBtn = new Button();
             studentsBtn = new Button();
             uniLabel = new Label();
             label2 = new Label();
@@ -57,19 +56,9 @@ namespace DBLearn
             degreesBtn.UseVisualStyleBackColor = true;
             degreesBtn.Click += degreesBtn_Click;
             // 
-            // CoursesBtn
-            // 
-            CoursesBtn.Location = new Point(517, 194);
-            CoursesBtn.Name = "CoursesBtn";
-            CoursesBtn.Size = new Size(170, 58);
-            CoursesBtn.TabIndex = 2;
-            CoursesBtn.Text = "Courses";
-            CoursesBtn.UseVisualStyleBackColor = true;
-            CoursesBtn.Click += CoursesBtn_Click;
-            // 
             // studentsBtn
             // 
-            studentsBtn.Location = new Point(314, 288);
+            studentsBtn.Location = new Point(511, 194);
             studentsBtn.Name = "studentsBtn";
             studentsBtn.Size = new Size(170, 58);
             studentsBtn.TabIndex = 4;
@@ -108,7 +97,6 @@ namespace DBLearn
             Controls.Add(label2);
             Controls.Add(uniLabel);
             Controls.Add(studentsBtn);
-            Controls.Add(CoursesBtn);
             Controls.Add(degreesBtn);
             Controls.Add(departmentsBtn);
             Name = "UniversityMenu";
@@ -123,7 +111,6 @@ namespace DBLearn
 
         private Button departmentsBtn;
         private Button degreesBtn;
-        private Button CoursesBtn;
         private Button studentsBtn;
         private Label uniLabel;
         private Label label2;
