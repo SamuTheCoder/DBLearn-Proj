@@ -73,16 +73,30 @@ namespace DBLearn
                 MessageBox.Show("Connection to database failed");
                 return;
             }
-            string query = $"SELECT * FROM dblearn.teacher JOIN dblearn.works_at ON teacher.professor_id = " +
-                $"works_at.professor_id WHERE works_at.university_name = '{this.university_name}' AND " +
-                $"teacher.department_id = (SELECT department_id FROM dblearn.department WHERE department_name = '{this.department_name}') AND " +
-                $"teacher.first_name LIKE '%{search}%'";
+            string query = "";
+            if(search.Contains(" "))
+            {
+                string[] names = search.Split(' ');
+                query = $"SELECT * FROM dblearn.teacher JOIN dblearn.works_at ON teacher.professor_id = " +
+               $"works_at.professor_id WHERE works_at.university_name = '{this.university_name}' AND " +
+               $"teacher.department_id = (SELECT department_id FROM dblearn.department WHERE department_name = '{this.department_name}') AND " +
+               $"first_name LIKE '%{names[0]}%' AND last_name LIKE '%{names[1]}%'";
+            }
+            else
+            {
+               query = $"SELECT * FROM dblearn.teacher JOIN dblearn.works_at ON teacher.professor_id = " +
+               $"works_at.professor_id WHERE works_at.university_name = '{this.university_name}' AND " +
+               $"teacher.department_id = (SELECT department_id FROM dblearn.department WHERE department_name = '{this.department_name}') AND " +
+               $"first_name LIKE '%{search}%'";
+            }
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
 
             adapter.SelectCommand = sqlCommand;
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
+
+            dataGridView1.DataSource = dataTable;
             sqlConnection.Close();
         }
 

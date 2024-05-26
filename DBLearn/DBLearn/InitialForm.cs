@@ -61,9 +61,9 @@ namespace DBLearn
             try
             {
                 sqlConnection.Open();
-                string sqlQuery = $"INSERT INTO dblearn.university (university_name, university_address) VALUES ('{universityName}', '{universityAddress}')";
-                using (SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection))
+                using (SqlCommand sqlCommand = new SqlCommand("AddUniversity", sqlConnection))
                 {
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
                     sqlCommand.Parameters.AddWithValue("@university_name", universityName);
                     sqlCommand.Parameters.AddWithValue("@university_address", universityAddress);
 
