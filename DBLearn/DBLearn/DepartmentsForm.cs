@@ -185,7 +185,7 @@ namespace DBLearn
                 sqlConnection.Close();
                 return;
             }
-            if(sqlConnection.State == ConnectionState.Open)
+            if (sqlConnection.State == ConnectionState.Open)
             {
                 sqlConnection.Close();
             }
@@ -194,6 +194,34 @@ namespace DBLearn
                 CoursesForm coursesForm = new CoursesForm(university_name, selectedDepartmentId);
                 coursesForm.Show();
             }
+        }
+
+        private void calcDeptCredsBtn_Click(object sender, EventArgs e)
+        {
+            if(deptGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a department to calculate credits");
+                return;
+            }
+
+            int department_id = Convert.ToInt32(deptGridView.SelectedRows[0].Cells["department_id"].Value);
+            int totalCredits = GetTotalCreditsFromDept(department_id);
+            MessageBox.Show($"Total credits for department {department_id}: {totalCredits}");
+        }
+
+        private int GetTotalCreditsFromDept(int department_id)
+        {
+            sqlConnection.Open();
+
+            int totalCredits = 0;
+            using (SqlCommand cmd = new SqlCommand("SELECT dblearn.GetTotalCreditsByDepartment(@department_id)", sqlConnection))
+            {
+                cmd.Parameters.AddWithValue("@department_id", department_id);
+                totalCredits = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+
+            sqlConnection.Close();
+            return totalCredits;
         }
     }
 }

@@ -45,15 +45,17 @@ namespace DBLearn
 
                 if (affectedRows > 0)
                 {
-                    MessageBox.Show("Course added successfully");
                 }
                 else
                 {
                     MessageBox.Show("Failed to add course");
                 }
 
-                string addCourseToDegree = $"INSERT INTO dblearn.has_courses (degree_id, course_id) VALUES ({degree_id}, {course_id})";
-                sqlCommand = new SqlCommand(addCourseToDegree, sqlConnection);
+                sqlCommand = new SqlCommand("AddHasCourse", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.Add(new SqlParameter("@degree_id", degree_id));
+                sqlCommand.Parameters.Add(new SqlParameter("@course_id", course_id));
+
                 affectedRows = sqlCommand.ExecuteNonQuery();
                 if (affectedRows > 0)
                 {

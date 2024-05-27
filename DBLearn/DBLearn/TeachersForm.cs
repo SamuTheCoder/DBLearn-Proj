@@ -132,12 +132,6 @@ namespace DBLearn
                 sqlConnection.Open();
                 using (SqlTransaction transaction = sqlConnection.BeginTransaction())
                 {
-                    string removeWorksAtQuery = $"DELETE FROM dblearn.works_at WHERE university_name = '{this.university_name}' AND professor_id = '{professor_id}'";
-                    using (SqlCommand sqlCommand = new SqlCommand(removeWorksAtQuery, sqlConnection, transaction))
-                    {
-                        sqlCommand.ExecuteNonQuery();
-                    }
-
                     string removeTeacherQuery = $"DELETE FROM dblearn.teacher WHERE department_id = (SELECT department_id FROM dblearn.department WHERE department_name = '{this.department_name}')" +
                         $" AND professor_id = '{professor_id}'";
                     using (SqlCommand sqlCommand = new SqlCommand(removeTeacherQuery, sqlConnection, transaction))

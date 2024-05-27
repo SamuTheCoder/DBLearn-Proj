@@ -38,6 +38,7 @@
             goToCourseBtn = new Button();
             searchBox = new TextBox();
             teachersBtn = new Button();
+            calcDeptCredsBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)deptGridView).BeginInit();
             SuspendLayout();
             // 
@@ -140,11 +141,22 @@
             teachersBtn.UseVisualStyleBackColor = true;
             teachersBtn.Click += teachersBtn_Click;
             // 
+            // calcDeptCredsBtn
+            // 
+            calcDeptCredsBtn.Location = new Point(1005, 124);
+            calcDeptCredsBtn.Name = "calcDeptCredsBtn";
+            calcDeptCredsBtn.Size = new Size(192, 57);
+            calcDeptCredsBtn.TabIndex = 12;
+            calcDeptCredsBtn.Text = "Calculate Department Credits";
+            calcDeptCredsBtn.UseVisualStyleBackColor = true;
+            calcDeptCredsBtn.Click += calcDeptCredsBtn_Click;
+            // 
             // DepartmentsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1228, 535);
+            Controls.Add(calcDeptCredsBtn);
             Controls.Add(teachersBtn);
             Controls.Add(searchBox);
             Controls.Add(searchBtn);
@@ -156,7 +168,7 @@
             Controls.Add(deptUniLabel);
             Controls.Add(deptGridView);
             Name = "DepartmentsForm";
-            Text = "W";
+            Text = "DepartmentsForm";
             Load += DepartmentsForm_Load;
             ((System.ComponentModel.ISupportInitialize)deptGridView).EndInit();
             ResumeLayout(false);
@@ -175,5 +187,6 @@
         private Button goToCourseBtn;
         private TextBox searchBox;
         private Button teachersBtn;
+        private Button calcDeptCredsBtn;
     }
 }
