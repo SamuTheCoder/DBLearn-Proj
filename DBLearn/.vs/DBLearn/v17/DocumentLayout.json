@@ -7,19 +7,19 @@
       "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\addcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\addcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\dblearn\\addcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\addcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\degreesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\dblearn\\degreesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\degreesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\studentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\dblearn\\studentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\studentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\degreesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\dblearn\\degreesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\degreesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "DBLearn\\addCourse.cs",
               "ToolTip": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\addCourse.cs",
               "RelativeToolTip": "DBLearn\\addCourse.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAUwEEAAAAmAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAUwDYAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-27T00:09:37.665Z",
               "EditorCaption": ""
@@ -58,8 +58,7 @@
               "ToolTip": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\addCourse.cs [Design]",
               "RelativeToolTip": "DBLearn\\addCourse.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T00:08:15.004Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-27T00:08:15.004Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "DBLearn\\DegreesForm.cs",
               "ViewState": "AQIAAHoAAAAAAAAAAAAwwIAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T22:52:39.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T22:52:39.549Z"
             },
             {
               "$type": "Document",
@@ -83,8 +81,7 @@
               "ToolTip": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\DegreesForm.cs [Design]",
               "RelativeToolTip": "DBLearn\\DegreesForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T22:51:00.05Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-26T22:51:00.05Z"
             },
             {
               "$type": "Document",
@@ -96,8 +93,7 @@
               "RelativeToolTip": "DBLearn\\StudentsForm.cs",
               "ViewState": "AQIAAMsAAAAAAAAAAAAAAM8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T20:26:35.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T20:26:35.448Z"
             },
             {
               "$type": "Document",
@@ -108,8 +104,7 @@
               "ToolTip": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\StudentsForm.cs [Design]",
               "RelativeToolTip": "DBLearn\\StudentsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T20:23:54.865Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-26T20:23:54.865Z"
             }
           ]
         }
