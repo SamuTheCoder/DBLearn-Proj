@@ -35,6 +35,7 @@
             addDegreeBtn = new Button();
             rmvDegreeBtn = new Button();
             menuStrip1 = new MenuStrip();
+            degreeCourseBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)degreeGridView).BeginInit();
             SuspendLayout();
             // 
@@ -107,11 +108,22 @@
             menuStrip1.TabIndex = 8;
             menuStrip1.Text = "menuStrip1";
             // 
+            // degreeCourseBtn
+            // 
+            degreeCourseBtn.Location = new Point(294, 163);
+            degreeCourseBtn.Name = "degreeCourseBtn";
+            degreeCourseBtn.Size = new Size(169, 52);
+            degreeCourseBtn.TabIndex = 9;
+            degreeCourseBtn.Text = "List Degree's Courses";
+            degreeCourseBtn.UseVisualStyleBackColor = true;
+            degreeCourseBtn.Click += degreeCourseBtn_Click;
+            // 
             // DegreesForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1222, 527);
+            Controls.Add(degreeCourseBtn);
             Controls.Add(rmvDegreeBtn);
             Controls.Add(addDegreeBtn);
             Controls.Add(listDegreeBtn);
@@ -137,5 +149,6 @@
         private Button addDegreeBtn;
         private Button rmvDegreeBtn;
         private MenuStrip menuStrip1;
+        private Button degreeCourseBtn;
     }
 }

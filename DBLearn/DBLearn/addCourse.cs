@@ -31,6 +31,7 @@ namespace DBLearn
             string course_description = descBox.Text;
             int credits = int.Parse(creditsBox.Text);
             int department_id = int.Parse(deptBox.Text);
+            int degree_id = int.Parse(degreeIdBox.Text);
 
             try
             {
@@ -50,6 +51,18 @@ namespace DBLearn
                 {
                     MessageBox.Show("Failed to add course");
                 }
+
+                string addCourseToDegree = $"INSERT INTO dblearn.has_courses (degree_id, course_id) VALUES ({degree_id}, {course_id})";
+                sqlCommand = new SqlCommand(addCourseToDegree, sqlConnection);
+                affectedRows = sqlCommand.ExecuteNonQuery();
+                if (affectedRows > 0)
+                {
+                    MessageBox.Show("Course added to degree successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add course to degree");
+                }
                 sqlConnection.Close();
             }
             catch (Exception ex)
@@ -63,6 +76,16 @@ namespace DBLearn
                     sqlConnection.Close();
                 }
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addCourse_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

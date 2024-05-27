@@ -73,7 +73,7 @@ namespace DBLearn
             try
             {
                 string selectedDegree = degreeGridView.SelectedRows[0].Cells["degree_id"].Value.ToString();
-                sqlConnection.Open();
+                sqlConnection.Open();              
                 string query = $"DELETE FROM dblearn.degree WHERE degree_id = '{selectedDegree}'";
                 SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
                 int affectedRows = sqlCommand.ExecuteNonQuery();
@@ -104,7 +104,7 @@ namespace DBLearn
 
         private void goToCoursesBtn_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(university_name))
+            if (!string.IsNullOrEmpty(university_name))
             {
                 CoursesForm coursesForm = new CoursesForm(university_name, selectedDegreeId);
                 coursesForm.Show();
@@ -113,11 +113,44 @@ namespace DBLearn
 
         private void degreeGridView_SelectionChanged(object sender, EventArgs e)
         {
-            if(degreeGridView.SelectedRows.Count > 0)
+            if (degreeGridView.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = degreeGridView.SelectedRows[0];
                 selectedDegreeId = Convert.ToInt32(selectedRow.Cells["degree_id"].Value);
             }
+        }
+
+        private void degreeCourseBtn_Click(object sender, EventArgs e)
+        {
+            if(degreeGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a degree to view courses");
+                return;
+            }
+            string selectedDegreeId = degreeGridView.SelectedRows[0].Cells["degree_id"].Value.ToString();
+            if(string.IsNullOrEmpty(selectedDegreeId))
+            {
+                MessageBox.Show("Please select a degree to view courses");
+                return;
+            }
+            sqlConnection.Open();
+            if (sqlConnection.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Connection to database failed");
+                return;
+            }
+            string query = $"SELECT c.course_id, c.course_name, c.course_description, c.credits, " +
+                $"d.university_name FROM dblearn.has_courses AS hc INNER JOIN dblearn.course AS c ON " +
+                $"hc.course_id = c.course_id INNER JOIN dblearn.degree AS d ON hc.degree_id = d.degree_id WHERE hc.degree_id = '{selectedDegreeId}'";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+
+            adapter.SelectCommand = sqlCommand;
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+
+            degreeGridView.DataSource = dataTable;
+            sqlConnection.Close();
         }
     }
 }

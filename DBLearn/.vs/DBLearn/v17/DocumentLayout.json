@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\addcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\addcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\addcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\addcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\degreesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\degreesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\studentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\studentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\studentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\degreesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\degreesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\dblearn\\studentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\studentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\initialform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\initialform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|c:\\users\\samut\\desktop\\dblearn-proj\\dblearn\\dblearn\\initialform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{68329F98-8D15-41A2-BE7C-EC3C26741CC5}|DBLearn\\DBLearn.csproj|solutionrelative:dblearn\\initialform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,19 +39,69 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "addCourse.cs",
+              "DocumentMoniker": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\addCourse.cs",
+              "RelativeDocumentMoniker": "DBLearn\\addCourse.cs",
+              "ToolTip": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\addCourse.cs",
+              "RelativeToolTip": "DBLearn\\addCourse.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAUwEEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T00:09:37.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "addCourse.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\addCourse.cs",
+              "RelativeDocumentMoniker": "DBLearn\\addCourse.cs",
+              "ToolTip": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\addCourse.cs [Design]",
+              "RelativeToolTip": "DBLearn\\addCourse.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T00:08:15.004Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DegreesForm.cs",
+              "DocumentMoniker": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\DegreesForm.cs",
+              "RelativeDocumentMoniker": "DBLearn\\DegreesForm.cs",
+              "ToolTip": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\DegreesForm.cs",
+              "RelativeToolTip": "DBLearn\\DegreesForm.cs",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAwwIAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T22:52:39.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DegreesForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\DegreesForm.cs",
+              "RelativeDocumentMoniker": "DBLearn\\DegreesForm.cs",
+              "ToolTip": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\DegreesForm.cs [Design]",
+              "RelativeToolTip": "DBLearn\\DegreesForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T22:51:00.05Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "StudentsForm.cs",
               "DocumentMoniker": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\StudentsForm.cs",
               "RelativeDocumentMoniker": "DBLearn\\StudentsForm.cs",
               "ToolTip": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\StudentsForm.cs",
               "RelativeToolTip": "DBLearn\\StudentsForm.cs",
-              "ViewState": "AQIAANYAAAAAAAAAAAAAwNYAAAANAAAA",
+              "ViewState": "AQIAAMsAAAAAAAAAAAAAAM8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T20:26:35.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "StudentsForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\StudentsForm.cs",
               "RelativeDocumentMoniker": "DBLearn\\StudentsForm.cs",
@@ -51,31 +109,6 @@
               "RelativeToolTip": "DBLearn\\StudentsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T20:23:54.865Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InitialForm.cs",
-              "DocumentMoniker": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\InitialForm.cs",
-              "RelativeDocumentMoniker": "DBLearn\\InitialForm.cs",
-              "ToolTip": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\InitialForm.cs",
-              "RelativeToolTip": "DBLearn\\InitialForm.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAADgv0YAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T20:16:20.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InitialForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\InitialForm.cs",
-              "RelativeDocumentMoniker": "DBLearn\\InitialForm.cs",
-              "ToolTip": "C:\\Users\\samut\\Desktop\\DBLearn-Proj\\DBLearn\\DBLearn\\InitialForm.cs [Design]",
-              "RelativeToolTip": "DBLearn\\InitialForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T20:16:18.9Z",
               "EditorCaption": " [Design]"
             }
           ]
